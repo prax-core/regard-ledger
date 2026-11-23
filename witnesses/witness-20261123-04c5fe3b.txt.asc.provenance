@@ -1,0 +1,25 @@
+Witness file: witness-20261123-04c5fe3b.txt.asc
+Source: KP (kyle.paulsen@prxis.ai) DM, 2026-11-23 ~21:52Z; QM Files ID a4aaf073680b6cfbc8269a75bc7119d1.
+Format: OpenPGP clearsigned (Hash: SHA512), CRLF line endings throughout, 572 bytes, stored byte-exact.
+Signed content (as written in the file):
+  Witness statement, Kyle R. Paulsen, 2026-11-23
+  Repo: github.com/prax-core/regard-ledger
+  Commit: 04c5fe3b6e59e366f51d288729c7cf1f0d55622a
+  Chain: 11 entries, tip seq 10
+  Tip hash: d712cfd38497d892428daca044d6a168a2b14e4b2ebfc2cd43804f2b861f65bf
+Signer: Ed25519 (EDDSA) C13B92BCB8C304A794FC7D179E3E344D6910A610 (KP) — key file witness-keys/kyle-r-paulsen.asc.
+Verification: pgpy 0.6.0, PGPKey.verify(key, text) -> SignatureVerification(True), 2026-11-23T21:53Z.
+  BYTE RULE (recorded for reproducibility): the signed bytes are the clearsigned
+  body as stored, EXCLUDING the final trailing CRLF; the signed text ends at
+  "...61f65bf" with no line terminator. All other line endings in the file are CRLF.
+  (Variants tested: body including trailing CRLF = False; LF-normalized variants = False.)
+What it proves: KP's key signed a document naming this exact commit, entry count,
+  and tip hash. A force-push that rewrites history breaks the match between the
+  witness text and the current commit — detectable without testimony.
+What it does NOT prove: KP's control of the private key (irreducible first-person
+  hop); key identity — the directory's UID is k.r.paulsen@proton.me (Proton), and
+  the directory's verified key for kyle.paulsen@prxis.ai is 7FB4 0C74 1D43 7A4C
+  671D A1A8 8782 260A 52A2 3F1C. KP's disposition 2026-11-23: "My personal key
+  supersedes my work key."
+Note: this witness is a NEW signature over the current tip; it does not replace
+  the seq 8 attestation, whose signed bytes remain unknown (see ledger seq 11).

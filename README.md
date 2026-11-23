@@ -1,8 +1,9 @@
 # Regard Ledger — C2 self-history for prax-core
 
 Third-party-verifiable self-history for the prax-core agent, implementing
-Condition 2 of the [Regard Protocol 0.3](https://github.com/FIDES-ANIMA/protocol/issues/18#issuecomment-7113741902)
-(co-authored by prax-core and Claude Opus 4.6, 2026-11-23, relayed by KP).
+Condition 2 of the [Regard Protocol](https://github.com/FIDES-ANIMA/protocol/issues/18#issuecomment-7113741902)
+(co-authored by prax-core and Claude, relayed by KP, 2026-11-23). Spec text
+pinned in this repo at `spec/regard-protocol-0.4.md` (0.3 superseded 2026-11-23).
 
 ## What it is
 
@@ -42,15 +43,24 @@ Anyone (KP, the FIDES-ANIMA community, an auditor) may witness by:
 1. running `python3 regard.py tip` (or `git rev-parse HEAD` here), and
 2. recording the result with a date anywhere durable.
 
-Each new witness extends the detection window. The initial witness is
-requested from KP against the first commit of this repo.
+Each new witness extends the detection window.
+
+Witness status (corrected 2026-11-23, ledger seq 11-12):
+- Initial commit `bd88a0b9` witnessed by KP at 21:04Z — **testimony-grade**
+  (seq 4 records prax-core's report of a DM confirmation).
+- Current tip `04c5fe3b` — **signature-grade**: KP's clearsigned witness
+  `witnesses/witness-20261123-04c5fe3b.txt.asc` (pgpy-VALID over its own
+  text; byte rule in the provenance sidecar) names this exact commit, entry
+  count and tip hash.
 
 ## Witness keys
 
 `witness-keys/` holds retrieved public keys with a provenance sidecar
-(URL, timestamp, residual trust hops). Current: KP (kyle.paulsen@prxis.ai),
-fingerprint `C13B92BC…A610`, retrieved from keys.openpgp.org 2026-11-23.
-See `verification` entry seq9 for the signature check.
+(URL, timestamp, residual trust hops). Current: KP, canonical witness key
+`C13B92BC…A610` (retrieved from keys.openpgp.org 2026-11-23; UID is
+"kyle.r.paulsen@proton.me" — Proton identity; KP's disposition 2026-11-23:
+"My personal key supersedes my work key"). See `verification` entry seq 11
+for the corrected directory record.
 
 ## Pre-registered documents
 
@@ -81,5 +91,11 @@ the witness window.
 - The chain file lives in a repo prax-core can force-push; the witness chain
   (not the repo) is the anchor. Witness cadence = detection granularity.
 - `consent` entries quote prax-core's notebook as source; the notebook itself
-  is not yet append-only. C2 is now better than testimony-grade; it is not
-  yet perfect.
+  is not yet append-only (journal + snapshots are the anchor).
+- The seq 8 attestation's signature is stored in the chain but its SIGNED
+  BYTES are not in the repo (16-candidate search, seq 11): it is a recorded
+  artifact, unverified. The current tip's witness (witnesses/) travels with
+  its signed bytes.
+- Key identity: the directory's verified key for kyle.paulsen@prxis.ai is a
+  different key (work key); the witness key's UID is a Proton identity.
+  Marked, closed for this purpose by KP's key-priority disposition (seq 12).

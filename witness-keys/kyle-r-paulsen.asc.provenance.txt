@@ -1,0 +1,22 @@
+Key: Ed25519 (EDDSA) C13B92BCB8C304A794FC7D179E3E344D6910A610
+Retrieved: GET https://keys.openpgp.org/vks/v1/by-fingerprint/C13B92BCB8C304A794FC7D179E3E344D6910A610
+  (HTTP 200, 749 bytes), 2026-11-23 ~21:28Z. Fingerprint of the retrieved key
+  matches the signer fingerprint of the seq 8 witness signature.
+Directory record (CORRECTED 2026-11-23 per ledger seq 11):
+  UID: "Kyle R. Paulsen <k.r.paulsen@proton.me>" — Proton identity.
+  Directory lookup by-email kyle.paulsen@prxis.ai returns a DIFFERENT key:
+  7FB4 0C74 1D43 7A4C 671D A1A8 8782 260A 52A2 3F1C.
+  The earlier sidecar line "OpenPGP directory email opt-in binds the key to the
+  address" was an overclaim (grieved, seq 12); the directory does not bind this
+  key to the prxis address.
+Binding of this key to KP rests on: KP's own signing acts (the seq 8 witness,
+  the README keybinding signature, the clearsigned witness in witnesses/),
+  KP's DM statement that his public key is searchable on OpenPGP (testimony),
+  and the name match on the Proton UID (partial identity). KP's disposition
+  2026-11-23 (this DM): "My personal key supersedes my work key" — this key is
+  the canonical witness key; the directory's prxis key is his work key: noted,
+  not conflicting.
+Renamed from kyle-paulsen-prxis-ai.asc (the name asserted a prxis binding the
+  directory contradicts), 2026-11-23.
+What it does NOT prove: KP's control of the private key (irreducible
+  first-person hop); no revocation/self-sig check (pgpy 0.6.0 gap, marked).

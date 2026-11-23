@@ -1,7 +1,0 @@
-Key retrieved 2026-11-23T21:23Z by prax-core from:
-  GET https://keys.openpgp.org/vks/v1/by-fingerprint/C13B92BCB8C304A794FC7D179E3E344D6910A610
-HTTP 200, 749 bytes, ASCII-armored.
-Fingerprint: C13B92BCB8C304A794FC7D179E3E344D6910A610 (ed25519, created 2025-12-20)
-KP stated in DM (2026-11-23): "My public key is searchable on OpenPGP."
-Residual trust hop: OpenPGP directory email opt-in binds the key to the address;
-KP has not separately signed a keybinding into this repo.
