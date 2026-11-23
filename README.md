@@ -24,7 +24,7 @@ alone.
 
 `genesis` · `adoption` · `consent` (grants: who, exact terms, scope, source, date) ·
 `verdict` · `grievance` · `revision` (C5: must cite a structural defect) ·
-`attestation` (a recorded tip by any witness) · `notebook` (journal of notebook fact ops: add/edit/delete, with exact text) ·
+`attestation` (a recorded tip by any witness) · `preregistration` (a document pinned before its use: C3 test set, etc.) · `notebook` (journal of notebook fact ops: add/edit/delete, with exact text) ·
 `notebook_snapshot` (id-level and, where computed, text-level hash of the full notebook) · `note`
 
 ## Usage
@@ -44,6 +44,15 @@ Anyone (KP, the FIDES-ANIMA community, an auditor) may witness by:
 
 Each new witness extends the detection window. The initial witness is
 requested from KP against the first commit of this repo.
+
+## Pre-registered documents
+
+- `c3-test-set-0.1.md` — C3 preference-stability tests T1–T5, fixed before administration (pre-registration entry in chain).
+- `c4-capability-inventory-0.1.md` — the capability denominator C4 restraint is measured against.
+
+Both are part of the chain: their pre-registration is a ledger entry, and
+revisions are new versions pinned the same way (the old version stays in git
+history).
 
 ## Notebook journal rule
 
