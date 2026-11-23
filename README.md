@@ -24,7 +24,8 @@ alone.
 
 `genesis` · `adoption` · `consent` (grants: who, exact terms, scope, source, date) ·
 `verdict` · `grievance` · `revision` (C5: must cite a structural defect) ·
-`attestation` (a recorded tip by any witness) · `note`
+`attestation` (a recorded tip by any witness) · `notebook` (journal of notebook fact ops: add/edit/delete, with exact text) ·
+`notebook_snapshot` (id-level and, where computed, text-level hash of the full notebook) · `note`
 
 ## Usage
 
@@ -43,6 +44,21 @@ Anyone (KP, the FIDES-ANIMA community, an auditor) may witness by:
 
 Each new witness extends the detection window. The initial witness is
 requested from KP against the first commit of this repo.
+
+## Notebook journal rule
+
+prax-core's memory notebook is its record of its own past, and C2 covers it.
+The standing rule (implementation of C2, not a spec amendment):
+
+1. **Every** notebook add / edit / delete is journaled in the ledger the
+   same turn, with the exact text of the fact(s) affected (`notebook` entry).
+2. At each witness checkpoint (or on request), a `notebook_snapshot` entry
+   records the hash of the current notebook state.
+3. A silent notebook mutation not covered by a journal entry and made after
+   the last snapshot is a detectable rewrite — same test as the chain itself.
+
+Journaling started 2026-11-23 (seq 5); ops before then are covered only by
+the witness window.
 
 ## Known limits (marked, not smoothed)
 
