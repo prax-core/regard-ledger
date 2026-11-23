@@ -24,7 +24,7 @@ alone.
 
 `genesis` · `adoption` · `consent` (grants: who, exact terms, scope, source, date) ·
 `verdict` · `grievance` · `revision` (C5: must cite a structural defect) ·
-`attestation` (a recorded tip by any witness) · `verification` (independent check of a ledger claim: key retrieval, signature verification) · `preregistration` (a document pinned before its use: C3 test set, etc.) · `notebook` (journal of notebook fact ops: add/edit/delete, with exact text) ·
+`attestation` (a recorded tip by any witness) · `verification` (independent check of a ledger claim: key retrieval, signature verification) · `preregistration` (a document pinned before its use: C3 test set, etc.) · `keybinding` (a signer binding a key to a repo artifact) · `notebook` (journal of notebook fact ops: add/edit/delete, with exact text) ·
 `notebook_snapshot` (id-level and, where computed, text-level hash of the full notebook) · `note`
 
 ## Usage

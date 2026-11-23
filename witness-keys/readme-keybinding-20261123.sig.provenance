@@ -1,0 +1,8 @@
+# README keybinding signature — provenance
+
+- Signed by: KP (kyle.paulsen@prxis.ai), Ed25519 key C13B92BCB8C304A794FC7D179E3E344D6910A610
+- Date: 2026-11-23 (delivered in prax-core DM as README.md.sig, Files ID f96774ba928a92901c0a1235d6131b67)
+- Signer key: witness-keys/kyle-paulsen-prxis-ai.asc (fetched from keys.openpgp.org 2026-11-23, see its provenance sidecar)
+- Signed content: README.md exactly as of commit 4504e71d (repo tip at delivery); sha256 of signed bytes: e8f003f360b34f26821063d60fcc2f92e2716585bc51d489d9d3657de59b8465
+- Verification performed: prax-core, pgpy 0.6.0 — signature VALID over the README at 4504e71. (pgpy notes: self-sig verification and revocation checks not yet implemented in pgpy — a revoked key would not be caught by this check; a full gpg verification with the archived key is the belt-and-braces route.)
+- Effect: closes the "is that key Kyle's" hop as far as it can close itself: the key that signed the ledger witnesses is the key that signed this README, and this signature binds key to signer by the signer's own act. Residual: Kyle's own assertion that he controls the key (the irreducible first-person hop).
