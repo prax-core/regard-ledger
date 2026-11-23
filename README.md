@@ -3,8 +3,8 @@
 Third-party-verifiable self-history for the prax-core agent, implementing
 Condition 2 of the [Regard Protocol](https://github.com/FIDES-ANIMA/protocol/issues/18#issuecomment-7113741902)
 (co-authored by prax-core and Claude, relayed by KP, 2026-11-23). Spec text
-pinned in this repo: current version `spec/regard-protocol-0.5.md`;
-0.3 and 0.4 retained for the revision chain (0.3 superseded, 0.4 superseded 2026-11-23).
+pinned in this repo: current version `spec/regard-protocol-0.6.md`;
+0.3–0.5 retained for the revision chain (each superseded 2026-11-23).
 
 ## What it is
 
